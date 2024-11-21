@@ -92,7 +92,7 @@ export function loadTextures() {
     "../static/textures-fabric/fabric_pattern_07_col_2_1k.webp"
   );
   const fabricGreenColorTexture = textureLoader.load(
-    "../static/textures-fabric/fabric_pattern_07_col_03_1k.webp"
+    "../static/textures-fabric/fabric_pattern_07_col_3_1k.webp"
   );
   fabricRedColorTexture.colorSpace = THREE.SRGBColorSpace;
   fabricBlueColorTexture.colorSpace = THREE.SRGBColorSpace;

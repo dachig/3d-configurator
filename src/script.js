@@ -21,7 +21,6 @@ export function initScene(
   );
   camera.position.z = 2.5;
   camera.position.x = -0.5;
-
   camera.position.y = 1.5;
 
   const renderer = new THREE.WebGLRenderer({
@@ -37,6 +36,8 @@ export function initScene(
   controls.target.set(0, 0.75, 0);
   controls.maxDistance = 2.5;
   controls.minDistance = 1.5;
+  controls.minPolarAngle = Math.PI / 4; // Minimum angle in radians (e.g., 45 degrees)
+  controls.maxPolarAngle = Math.PI / 2; // Maximum angle in radians (e.g., 90 degrees)
   // Ambient light
   const ambientLight = new THREE.AmbientLight("#86cdff", 0.5);
   scene.add(ambientLight);
@@ -72,7 +73,6 @@ export function initScene(
 
   // chairStructureGroup
   const chairStructureGroup = new THREE.Group();
-
   scene.add(chairStructureGroup);
   const materialStructure = new THREE.MeshStandardMaterial({
     map: chairMaterial[0],
@@ -96,7 +96,6 @@ export function initScene(
   const seat = new THREE.Mesh(seatGeometry, materialStructure);
   seat.castShadow = true;
   seat.position.set(0, 0.5, 0);
-  //   camera.lookAt(seat.position);
 
   // back
   const sidesBackGeometry = new THREE.BoxGeometry(0.1, 1.35, 0.1, 25, 25, 25);
@@ -177,13 +176,6 @@ export function initScene(
   armSupportLeft.position.set(0.5, 0.8, 0.2);
   armSupportLeft.rotation.x = -0.1;
 
-  //   chairArmsGroup.add(
-  //     armRestRight,
-  //     armRestLeft,
-  //     armSupportRight,
-  //     armSupportLeft
-  //   );
-
   // pillowsGroup
   const pillowsGroup = new THREE.Group();
   scene.add(pillowsGroup);
@@ -243,7 +235,7 @@ export function initScene(
     backPillowCenter2,
     backPillowCenter3
   );
-  //   chairArmsGroup.add(armRestPillowRight, armRestPillowLeft);
+
   if (chairType == "classic") {
     chairArmsGroup.remove(
       armRestPillowRight,
@@ -263,7 +255,7 @@ export function initScene(
       armSupportLeft
     );
   }
-  // Animation Loop
+  // Animation loop
   function animate() {
     requestAnimationFrame(animate);
     controls.update();

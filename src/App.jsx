@@ -90,17 +90,17 @@ const App = () => {
             <div id="fabricContainer">
               <img
                 style={{ width: 50, height: 50 }}
-                src="./static/fabric_pattern_07_col_1_1k.jpg"
+                src="./static/textures-fabric/fabric_pattern_07_col_1_1k.webp"
                 onClick={() => setPillowMaterial(textures.fabricTextures.red)}
               />
               <img
                 style={{ width: 50, height: 50 }}
-                src="./fabric_pattern_07_col_2_1k.jpg"
+                src="./static/textures-fabric/fabric_pattern_07_col_2_1k.webp"
                 onClick={() => setPillowMaterial(textures.fabricTextures.blue)}
               />
               <img
                 style={{ width: 50, height: 50 }}
-                src="./fabric_pattern_07_col_03_1k.jpg"
+                src="./static/textures-fabric/fabric_pattern_07_col_3_1k.webp"
                 onClick={() => setPillowMaterial(textures.fabricTextures.green)}
               />
             </div>
