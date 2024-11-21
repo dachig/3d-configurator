@@ -8,18 +8,21 @@ const App = () => {
   const containerRef = useRef(null);
   const [chairType, setChairType] = useState("classic");
   const [pillowType, setPillowType] = useState("leather");
-  const [chairMaterial, setChairMaterial] = useState(
-    textures.woodTextures.darkWood
-  );
+  const [chairMaterial, setChairMaterial] = useState(textures.woodTextures.oak);
   const [pillowMaterial, setPillowMaterial] = useState(
-    textures.fabricTextures.green
+    textures.leatherTextures.white
   );
   useEffect(() => {
     if (containerRef.current) {
-      initScene(containerRef.current, chairMaterial, pillowMaterial, chairType, textures.planeTextures);
+      initScene(
+        containerRef.current,
+        chairMaterial,
+        pillowMaterial,
+        chairType,
+        textures.planeTextures
+      );
     }
   }, [chairMaterial, pillowMaterial, chairType]);
-
   return (
     <div>
       <div
@@ -28,7 +31,7 @@ const App = () => {
       />
       <div id="configuratorUI">
         <div id="chairMaterial">
-          <p style={{ fontWeight: "bold", color: "white" }}>MATERIAL</p>
+          <p style={{ fontWeight: "bold", color: "white" }}>WOOD</p>
           <div id="woodContainer">
             <img
               style={{ width: 50, height: 50 }}

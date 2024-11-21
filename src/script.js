@@ -44,7 +44,7 @@ export function initScene(
 
   // Point light
   const pointLight = new THREE.PointLight("#0xffff", 2, 8, 0);
-  pointLight.position.set(0, 3, 1);
+  pointLight.position.set(0, 2.5, 1);
   pointLight.castShadow = true;
   pointLight.shadow.mapSize.width = 516;
   pointLight.shadow.mapSize.height = 516;
@@ -52,6 +52,10 @@ export function initScene(
   pointLight.shadow.camera.far = 4;
   scene.add(pointLight);
   scene.fog = new THREE.FogExp2("black", 0.1);
+
+  const pointLight2 = new THREE.RectAreaLight("#0xffff", 1);
+  pointLight2.position.set(0, 1.5, 3);
+  scene.add(pointLight2);
 
   // Plane scene
   const planeGeometry = new THREE.PlaneGeometry(20, 20);
