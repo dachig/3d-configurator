@@ -110,40 +110,40 @@ export function loadTextures() {
     green: [fabricGreenColorTexture, fabricARMTexture, fabricNormalTexture],
   };
 
-  // Plane Textures
-  const planeColorTexture = textureLoader.load(
-    "../static/textures-plane/weathered_brown_planks_diff_1k.jpg"
+  // Floor Textures
+  const floorColorTexture = textureLoader.load(
+    "../static/textures-floor/weathered_brown_planks_diff_1k.jpg"
   );
-  planeColorTexture.repeat.set(3, 3);
-  planeColorTexture.wrapS = THREE.RepeatWrapping;
-  planeColorTexture.wrapT = THREE.RepeatWrapping;
-  planeColorTexture.colorSpace = THREE.SRGBColorSpace;
-  const planeARMTexture = textureLoader.load(
-    "../static/textures-plane/weathered_brown_planks_arm_1k.jpg"
+  floorColorTexture.repeat.set(4, 4);
+  floorColorTexture.wrapS = THREE.RepeatWrapping;
+  floorColorTexture.wrapT = THREE.RepeatWrapping;
+  floorColorTexture.colorSpace = THREE.SRGBColorSpace;
+  const floorARMTexture = textureLoader.load(
+    "../static/textures-floor/weathered_brown_planks_arm_1k.jpg"
   );
-  planeARMTexture.repeat.set(3, 3);
-  planeARMTexture.wrapS = THREE.RepeatWrapping;
-  planeARMTexture.wrapT = THREE.RepeatWrapping;
-  const planeNormalTexture = textureLoader.load(
-    "../static/textures-plane/weathered_brown_planks_nor_gl_1k.jpg"
+  floorARMTexture.repeat.set(4, 4);
+  floorARMTexture.wrapS = THREE.RepeatWrapping;
+  floorARMTexture.wrapT = THREE.RepeatWrapping;
+  const floorNormalTexture = textureLoader.load(
+    "../static/textures-floor/weathered_brown_planks_nor_gl_1k.jpg"
   );
-  planeNormalTexture.repeat.set(3, 3);
-  planeNormalTexture.wrapS = THREE.RepeatWrapping;
-  planeNormalTexture.wrapT = THREE.RepeatWrapping;
-  const planeAlphaTexture = textureLoader.load(
-    "../static/textures-plane/alpha.webp"
+  floorNormalTexture.repeat.set(4, 4);
+  floorNormalTexture.wrapS = THREE.RepeatWrapping;
+  floorNormalTexture.wrapT = THREE.RepeatWrapping;
+  const floorAlphaTexture = textureLoader.load(
+    "../static/textures-floor/alpha.webp"
   );
-  const planeTextures = [
-    planeColorTexture,
-    planeARMTexture,
-    planeNormalTexture,
-    planeAlphaTexture,
+  const floorTextures = [
+    floorColorTexture,
+    floorARMTexture,
+    floorNormalTexture,
+    floorAlphaTexture,
   ];
 
   return {
     woodTextures,
     leatherTextures,
     fabricTextures,
-    planeTextures,
+    floorTextures,
   };
 }

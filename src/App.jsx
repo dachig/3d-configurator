@@ -19,7 +19,7 @@ const App = () => {
         chairMaterial,
         pillowMaterial,
         chairType,
-        textures.planeTextures
+        textures.floorTextures
       );
     }
   }, [chairMaterial, pillowMaterial, chairType]);
